@@ -1,0 +1,381 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BulkBuy | Wholesale Stationery for Schools</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#231b00",
+                    "on-primary-container": "#eeefff",
+                    "surface-container": "#eceef0",
+                    "surface-bright": "#f7f9fb",
+                    "primary": "#004ac6",
+                    "on-secondary-container": "#6f5900",
+                    "inverse-surface": "#2d3133",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "surface": "#f7f9fb",
+                    "on-surface-variant": "#434655",
+                    "surface-dim": "#d8dadc",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#dbe1ff",
+                    "on-surface": "#191c1e",
+                    "tertiary": "#4d556b",
+                    "on-primary-fixed": "#00174b",
+                    "tertiary-container": "#656d84",
+                    "secondary": "#735c00",
+                    "tertiary-fixed-dim": "#bec6e0",
+                    "background": "#f7f9fb",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-highest": "#e0e3e5",
+                    "tertiary-fixed": "#dae2fd",
+                    "secondary-fixed-dim": "#eec200",
+                    "outline-variant": "#c3c6d7",
+                    "surface-container-high": "#e6e8ea",
+                    "on-background": "#191c1e",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#ffe083",
+                    "outline": "#737686",
+                    "on-tertiary-container": "#eef0ff",
+                    "on-tertiary-fixed-variant": "#3f465c",
+                    "primary-container": "#2563eb",
+                    "on-tertiary-fixed": "#131b2e",
+                    "secondary-fixed-variant": "#574500",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-tint": "#0053db",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "40px",
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "stack-lg": "32px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "title-lg": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "title-lg": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-link {
+            border-bottom: 2px solid #004ac6;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest shadow-[0px_4px_20px_rgba(0,0,0,0.04)] transition-all duration-300">
+<nav class="max-w-container-max mx-auto px-margin-desktop py-4 flex items-center justify-between">
+<!-- Brand Logo -->
+<div class="flex items-center gap-10">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">BulkBuy</span>
+<!-- Nav Links - Desktop -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-bold font-label-md text-label-md transition-colors duration-200" href="#">Notebooks</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#">Writing</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#">Art Supplies</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#">Office</a>
+</div>
+</div>
+<!-- Search and Actions -->
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container-low rounded-full px-4 py-2 border border-outline-variant w-64">
+<span class="material-symbols-outlined text-outline text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm w-full" placeholder="Search supplies..." type="text">
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-primary text-on-primary font-bold rounded-xl transition-transform active:scale-95 duration-150">
+                        Request Quote
+                    </button>
+<button class="relative p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">shopping_cart</span>
+<span class="absolute top-0 right-0 bg-secondary text-on-secondary text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full">3</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[28px]">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+</header>
+<main class="pt-24 overflow-x-hidden">
+<!-- Hero Section -->
+<section class="relative px-margin-desktop py-stack-lg max-w-container-max mx-auto overflow-hidden">
+<div class="flex flex-col lg:flex-row items-center gap-12 py-12">
+<div class="w-full lg:w-1/2 space-y-8 animate-in fade-in slide-in-from-left duration-700">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span> Certified Wholesale Partner</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">The Smartest Way to <span class="text-primary">Source Your Supplies.</span></h1>
+<p class="text-body-lg text-on-surface-variant max-w-lg">Simplify procurement with wholesale prices on premium stationery and office essentials. High-quality supplies for businesses, organizations, and creators worldwide.</p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="px-8 py-4 bg-primary text-on-primary font-bold rounded-xl shadow-lg hover:shadow-primary/20 transition-all active:scale-95">Create a Business Account</button>
+<button class="px-8 py-4 bg-surface-container-highest text-on-surface font-bold rounded-xl hover:bg-surface-dim transition-all active:scale-95 flex items-center gap-2">
+                            Explore Catalog
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="w-full lg:w-1/2 relative h-[500px] lg:h-[600px] animate-in fade-in slide-in-from-right duration-1000">
+<!-- High Quality Imagery Placement -->
+<div class="absolute inset-0 rounded-[32px] overflow-hidden shadow-2xl transform rotate-1 group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, professionally organized workspace featuring neatly stacked vibrant notebooks in various pastel colors, sharp graphite pencils, and high-quality art brushes arranged in a ceramic holder. The lighting is bright and airy, using a soft-key high-fidelity aesthetic to highlight textures and clean lines. The background is a minimalist slate grey that makes the primary blue and secondary yellow accents of the stationery pop with corporate vibrancy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHCzgg5xrZSJ4SYI1iCZas5LRWRczkLDRU71QSTasUF8Q94t0JiSIJHub-XWc-4jkrhoczENonOX7pW8C8G8cBwUNY9cxhqfqaKJMkxxq0RWp4mirACaXBByJmDSYdMWMymlbYOYv6VLtyw0Dj9eD0nQxm6P898qSbUqde286rtXitJOWh0e85cv9WlrfvPVAbhCniF1ZFm5Svuj_mfksBUh7r8fH6OXKEU-eY1WJ9lvMhMjWPO5LwvV9fkb2ca8oWcVHcdL1MsCGE">
+</div>
+<!-- Floating Accent Card -->
+<div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl shadow-xl max-w-xs animate-bounce" style="animation-duration: 4s;">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container">trending_up</span>
+</div>
+<div>
+<p class="text-label-sm font-bold text-secondary">Up to 45% OFF</p>
+<p class="text-body-sm font-medium">Bulk Notebook Bundles</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Props -->
+<section class="bg-surface-container-low py-20 px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="flex flex-col items-center text-center p-8 bg-surface-container-lowest rounded-3xl shadow-sm border border-outline-variant hover:border-primary transition-colors duration-300 group">
+<div class="w-16 h-16 bg-primary-fixed rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[32px]">public</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Global Shipping</h3>
+<p class="text-body-md text-on-surface-variant">Reliable logistics network delivering to educational institutions in over 120 countries with real-time tracking.</p>
+</div>
+<div class="flex flex-col items-center text-center p-8 bg-surface-container-lowest rounded-3xl shadow-sm border border-outline-variant hover:border-primary transition-colors duration-300 group">
+<div class="w-16 h-16 bg-secondary-fixed rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-secondary-fixed text-[32px]">payments</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Tiered Discounts</h3>
+<p class="text-body-md text-on-surface-variant">Sophisticated pricing tiers that reward large scale procurement. Save more as your school's order volume grows.</p>
+</div>
+<div class="flex flex-col items-center text-center p-8 bg-surface-container-lowest rounded-3xl shadow-sm border border-outline-variant hover:border-primary transition-colors duration-300 group">
+<div class="w-16 h-16 bg-tertiary-fixed rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-[32px]">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Certified Quality</h3>
+<p class="text-body-md text-on-surface-variant">Every product undergoes rigorous testing for classroom safety and longevity. Trusted by 5,000+ schools.</p>
+</div>
+</div>
+</section>
+<!-- Top Categories - Bento Grid Style -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-12 flex justify-between items-end">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-2">Shop Top Categories</h2>
+<p class="text-body-lg text-on-surface-variant">Curated wholesale collections for every department.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 hover:underline">
+                    View All Categories <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 h-auto md:h-[600px]">
+<!-- Main Featured: Notebooks -->
+<div class="md:col-span-3 lg:col-span-3 bg-white rounded-[32px] overflow-hidden relative group shadow-sm min-h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A macro close-up of premium spiral notebooks and journals stacked vertically, showcasing high-quality paper texture and durable colorful covers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkyXGL0aw08B02kTngB_NXmCR041U0cyXoMFDrrBehxskdOG1rHBipbopmZHEaw_jzbzWRb3dPFkC5xRN_wKhL5jPjYTf586x__uFSNCQgQAsznoqSxnr5T5jah6lySs2V36c3lfyDDeg10ddYI43HWngS8jD3PNvhkEeSl2GiseJ7JAc6-Bz6eXZQ1X5Ow3cSts4v-vZOKdy4uph_kmvpxYv7OM2lS9DtnaIoXNTelyrYltfuuvQm9GOoAYiMA3El9mYcapqeFCBV">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-10 flex flex-col justify-end text-white">
+<h3 class="font-headline-lg text-headline-lg">Notebooks</h3>
+<p class="text-body-md opacity-90 mb-6">Hardcover, Spiral, and Composition books.</p>
+<button class="w-fit px-8 py-3 bg-white text-on-surface font-bold rounded-xl active:scale-95 transition-transform">Shop Bulk</button>
+</div>
+</div>
+<!-- Secondary: Writing Tools -->
+<div class="md:col-span-3 lg:col-span-3 bg-white rounded-[32px] overflow-hidden relative group shadow-sm min-h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A creative arrangement of various writing instruments including ergonomic pens, graphite pencils, and vibrant highlighters laid out on a pristine white desk surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOvqlEjhVYevexzbHzT_leLta7fGvFL6ikS7cW3YrWuVwInC5EsNBjgZIuNBC3PxqzdAFxbWZHF-CaC7-geba8BDmQrZi4ZRs2i52smb5_M8k83DXFpxVdBu2yn7pQFAff8Y4l-GzzHh-7ShOUjK_efHiqcqPsRe5ySstMeyHnj144f6BSdspn5qRyN1F5hcLswHpfgp1EBcj-oH-Sbbk5u3QvMlQ0_KM5lV4TuwQxQR4Xm9ouARDPqupEhMdAWFNRrrxMRWydr7hI">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-10 flex flex-col justify-end text-white">
+<h3 class="font-headline-lg text-headline-lg">Writing Tools</h3>
+<p class="text-body-md opacity-90 mb-6">Premium pens, pencils, and erasers.</p>
+<button class="w-fit px-8 py-3 bg-white text-on-surface font-bold rounded-xl active:scale-95 transition-transform">Browse Packs</button>
+</div>
+</div>
+<!-- Tertiary: Art Kits -->
+<div class="md:col-span-4 lg:col-span-4 bg-white rounded-[32px] overflow-hidden relative group shadow-sm min-h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An expansive set of art supplies featuring watercolor palettes, thick-bristled brushes, and vibrant tubes of acrylic paint." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4OnVPC4_MB2-SdsWfWk699kQtLWNPf2J-3xQGqncKcTxvb_3BjFl6QQ9sBsliqB9qN6PxJDWVJ2FZm-84mZBbCgGZp4pnukr9_216t2cdvAoGI2VYIxONBSqBjuQWvdrG757Tj6dJq20VOJWCP84IMviCscD7KI20WMDVn6KySxOV4dPsAfafm5CFNzkKT5VhxfJgD-BIJJbRpaP3F3aizd-67dDQg2O3jX0I4cLoE8QkYYjxrLKdQJ4QhrFUbb2IpmO5uF7djQVo">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-10 flex flex-col justify-end text-white">
+<h3 class="font-headline-lg text-headline-lg">Art Kits</h3>
+<p class="text-body-md opacity-90 mb-6">Complete classroom sets for all ages.</p>
+<button class="w-fit px-8 py-3 bg-white text-on-surface font-bold rounded-xl active:scale-95 transition-transform">Explore Kits</button>
+</div>
+</div>
+<!-- Flash Sale: Office -->
+<div class="md:col-span-2 lg:col-span-2 bg-secondary-container rounded-[32px] p-10 flex flex-col justify-between group shadow-sm border border-secondary/20 min-h-[400px]">
+<div class="space-y-4">
+<span class="px-4 py-1.5 bg-secondary text-on-secondary text-label-sm font-bold rounded-full uppercase tracking-wider">Flash Deal</span>
+<h3 class="font-headline-lg text-headline-lg text-on-secondary-container leading-tight">School Office Essentials</h3>
+</div>
+<div>
+<p class="text-headline-md font-bold text-on-secondary-container mb-4">Save up to 60%</p>
+<button class="w-full py-4 bg-on-secondary-fixed text-white font-bold rounded-2xl active:scale-95 transition-all shadow-md">View All Sales</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="bg-surface-container py-24">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg mb-4">Trusted by 5,000+ Schools Worldwide</h2>
+<p class="text-body-lg text-on-surface-variant mb-16 max-w-2xl mx-auto">From primary schools to universities, educational procurement teams rely on BulkBuy for consistent quality and logistics.</p>
+<!-- Logo Wall -->
+<div class="flex flex-wrap justify-center items-center gap-16 grayscale opacity-60">
+<div class="h-12 w-40 bg-on-surface-variant/20 rounded-lg flex items-center justify-center font-bold text-headline-md">OXFORD</div>
+<div class="h-12 w-40 bg-on-surface-variant/20 rounded-lg flex items-center justify-center font-bold text-headline-md">STANFORD</div>
+<div class="h-12 w-40 bg-on-surface-variant/20 rounded-lg flex items-center justify-center font-bold text-headline-md">HARVARD</div>
+<div class="h-12 w-40 bg-on-surface-variant/20 rounded-lg flex items-center justify-center font-bold text-headline-md">SORBONNE</div>
+<div class="h-12 w-40 bg-on-surface-variant/20 rounded-lg flex items-center justify-center font-bold text-headline-md">TSINGHUA</div>
+</div>
+<!-- Testimonial -->
+<div class="mt-24 max-w-3xl mx-auto p-12 bg-surface-container-lowest rounded-[40px] shadow-sm relative border border-outline-variant">
+<span class="material-symbols-outlined text-primary text-[64px] absolute -top-8 left-12 bg-surface-container-lowest px-2">format_quote</span>
+<p class="text-body-lg text-on-surface italic mb-8">
+                        "BulkBuy has completely transformed our supply chain. We've reduced our stationery spend by 28% while improving the quality of supplies our students receive. The tiered pricing is truly built for the realities of large school budgets."
+                    </p>
+<div class="flex items-center justify-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a female procurement director in her 40s, smiling warmly. She is wearing a modern navy blazer. The lighting is clean and flattering, set against a soft-focus office background with books and organized stationery, conveying authority and trust in an educational professional context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAf_EGqa_0kISxSKer83MEuV7PhiS9Co8X2AvF7Hie9BDSdkPwgfAlfrXNUAwM9Ezwk9zlFRCzySf6aRBc6zXz_ZY-uEGpKL28pOqqNoC3TivV9Qwv2WisWTeiYqzrYR1XlbrKUYq1eFkxb7xMamrd7IqpeuqrAxkPLZCROsW8c9cXa5Hw_byV24O5Z0YzrmR465Dn52n0rRQmil9tttnVS5BR6BW_Q8n6qKI0RjDiblcHMvKF5wPtA7mg4G9-xiB84AzkqL4nASNn">
+</div>
+<div class="text-left">
+<p class="font-bold text-on-surface">Sarah Jenkins</p>
+<p class="text-body-sm text-on-surface-variant">Procurement Director, Global Academies</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-primary rounded-[48px] p-12 md:p-24 relative overflow-hidden text-center text-on-primary">
+<!-- Abstract Design Elements -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-48 -mt-48"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl -ml-48 -mb-48"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-display-lg text-display-lg mb-6 leading-tight">Ready to Optimize Your School's Supplies?</h2>
+<p class="text-body-lg text-on-primary-container mb-12 opacity-90">Join thousands of educational leaders who choose efficiency and quality. Create your dedicated school account today.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-10 py-5 bg-white text-primary font-bold rounded-2xl shadow-xl hover:scale-105 transition-transform active:scale-95">Create a Business Account</button>
+<button class="px-10 py-5 bg-primary-container border border-white/30 text-white font-bold rounded-2xl hover:bg-white/10 transition-colors active:scale-95">
+                            Speak to a Specialist
+                        </button>
+</div>
+<p class="mt-8 text-label-md opacity-70">No credit card required to browse wholesale pricing.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-desktop mt-auto max-w-container-max mx-auto flex flex-col md:flex-row justify-between gap-gutter border-t border-outline-variant bg-surface-container-high">
+<div class="flex flex-col gap-6 md:w-1/3">
+<span class="font-headline-md text-headline-md font-bold text-primary">BulkBuy</span>
+<p class="text-body-sm text-on-surface-variant max-w-xs">BulkBuy Wholesale is the leading platform for educational procurement, providing high-quality creative and office supplies to institutions worldwide.</p>
+<div class="flex gap-4">
+<a class="p-2 bg-white rounded-full text-primary hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="p-2 bg-white rounded-full text-primary hover:scale-110 transition-transform" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-2 gap-12">
+<div class="flex flex-col gap-4">
+<p class="font-label-md text-label-md text-on-surface font-bold">Quick Links</p>
+<a class="text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="#">About Us</a>
+<a class="text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="#">Bulk Pricing</a>
+<a class="text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="#">Shipping Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<p class="font-label-md text-label-md text-on-surface font-bold">Support</p>
+<a class="text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="#">Contact Support</a>
+<a class="text-body-sm text-on-surface-variant hover:underline hover:text-primary transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="flex flex-col justify-end md:items-end gap-2 mt-8 md:mt-0">
+<p class="text-body-sm text-on-surface-variant">© 2024 BulkBuy Wholesale. Certified Educational Supplier.</p>
+<p class="text-body-sm text-on-surface-variant opacity-60">HQ: 124 Education Row, London, UK</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions for Header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4', 'shadow-[0px_4px_20px_rgba(0,0,0,0.04)]');
+            } else {
+                header.classList.add('py-4', 'shadow-[0px_4px_20px_rgba(0,0,0,0.04)]');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+
+        // Hover effect for bento cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('shadow-xl');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('shadow-xl');
+            });
+        });
+    </script>
+
+
+
+
+</body></html>
