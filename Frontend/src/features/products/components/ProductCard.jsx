@@ -1,28 +1,17 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { Info, ShoppingCart } from "lucide-react";
 import { imgUrl } from "../../../data/products";
-import Toast from "../../../components/site/Toast";
-
-
-import { useDispatch } from "react-redux";
 import { addToCart } from "../../cart/cartSlice";
 
-export function ProductCard({ product, idx = 1 }) {
+export function ProductCard({ product, idx = 1, onAddToCartSuccess }) {
   const dispatch = useDispatch();
-  const [toastMessage, setToastMessage] = useState("");
 
   const handleAddToCart = () => {
-   
-    dispatch(
-      addToCart({
-        id: product.id,
-        qty: product.minOrder,
-      })
-    );
-
-    // Trigger Custom Toast Notification
-    setToastMessage(`${product.minOrder} × ${product.name} added to cart`);
+    dispatch(addToCart({ id: product.id, qty: product.minOrder }));
+    if (onAddToCartSuccess) {
+      onAddToCartSuccess(`${product.minOrder} × ${product.name} added to cart`);
+    }
   };
 
   return (
@@ -53,8 +42,8 @@ export function ProductCard({ product, idx = 1 }) {
           {product.name.toUpperCase()}
         </Link>
         <div className="flex items-baseline gap-2">
-          <span className="text-2xl font-bold text-foreground">${product.basePrice}</span>
-          <span className="text-sm text-muted-foreground line-through">${product.compareAt}</span>
+          <span className="text-2xl font-bold text-foreground">₹{product.basePrice}</span>
+          <span className="text-sm text-muted-foreground line-through">₹{product.compareAt}</span>
           <span className="ml-auto text-xs text-muted-foreground">Min {product.minOrder}</span>
         </div>
         <div className="mt-auto flex items-center gap-2 pt-2">
@@ -73,12 +62,6 @@ export function ProductCard({ product, idx = 1 }) {
           </button>
         </div>
       </div>
-
-      {/* Render custom toast if message exists */}
-      <Toast 
-        message={toastMessage} 
-        onClose={() => setToastMessage("")} 
-      />
     </div>
   );
 }

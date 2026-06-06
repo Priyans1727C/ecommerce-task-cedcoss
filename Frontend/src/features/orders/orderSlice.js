@@ -3,7 +3,6 @@ import { MOCK_ORDERS } from "../../data/cart";
 
 const orderSlice = createSlice({
   name: "orders",
-  // initialState is a direct Array structure
   initialState: JSON.parse(localStorage.getItem("orders")) || MOCK_ORDERS,
 
   reducers: {
@@ -19,7 +18,6 @@ const orderSlice = createSlice({
         status: "Processing",
       };
 
-      // FIX: 'state' is the array itself. Unshift directly onto it.
       state.unshift(order);
 
       localStorage.setItem(
@@ -27,15 +25,13 @@ const orderSlice = createSlice({
         JSON.stringify(state)
       );
 
-      // In Redux Toolkit / Immer, we return the newly generated item 
-      // if we want to read it from the dispatch response, or just mutate.
+   
       return state;
     },
 
     updateOrderStatus: (state, action) => {
       const { id, status } = action.payload;
 
-      // FIX: Find directly within 'state' array
       const order = state.find(
         (o) => o.id === id
       );
@@ -52,7 +48,6 @@ const orderSlice = createSlice({
 
     clearOrders: () => {
       localStorage.setItem("orders", "[]");
-      // FIX: Safely reset the array state by returning an empty array
       return [];
     },
   },

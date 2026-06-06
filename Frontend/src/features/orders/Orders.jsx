@@ -79,16 +79,16 @@ export default function Orders() {
                       <img src={imgUrl(it.image, 1)} alt={it.name} className="h-14 w-14 rounded-lg object-cover" />
                       <div className="flex-1">
                         <div className="font-semibold">{it.name}</div>
-                        <div className="text-xs text-muted-foreground">Qty: {it.qty} · ${it.price ? it.price.toFixed(2) : "0.00"} / set</div>
+                        <div className="text-xs text-muted-foreground">Qty: {it.qty} · ₹{it.price ? it.price.toFixed(2) : "0.00"} / set</div>
                       </div>
-                      <div className="font-semibold">${(it.price && it.qty) ? (it.price * it.qty).toFixed(2) : "0.00"}</div>
+                      <div className="font-semibold">₹{(it.price && it.qty) ? (it.price * it.qty).toFixed(2) : "0.00"}</div>
                     </div>
                   ))}
                 </div>
                 
                 <footer className="flex items-center justify-between border-t border-border bg-muted/40 px-6 py-4">
                   <span className="text-sm text-muted-foreground">Total</span>
-                  <span className="font-display text-2xl font-bold">${o.total ? o.total.toFixed(2) : "0.00"}</span>
+                  <span className="font-display text-2xl font-bold">₹{o.total ? o.total.toFixed(2) : "0.00"}</span>
                 </footer>
               </article>
             );
